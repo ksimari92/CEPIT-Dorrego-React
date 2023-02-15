@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import Galeria from './componentes/Galeria/Galeria';
+import ListaDeContenidos from './componentes/ListaDeContenidos/ListaDeContenidos'
+import Eventos2 from './componentes/Eventos/Eventos2';
+
 
 function App() {
+
+let nombres = ['Matias', 'juan', 'Luis', 'Pedro'];
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+     <div>
+        <Eventos2/>
+       <ListaDeContenidos />
+
+      <Galeria nombres={nombres}/> 
+  
+    </div> 
+    );
 }
 
 export default App;

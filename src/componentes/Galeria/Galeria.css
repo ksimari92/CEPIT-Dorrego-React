@@ -1,0 +1,11 @@
+.contenedor-fotos {
+    /* background-color: blue; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.titulo-galeria {
+    text-align: center;
+    color: green;
+}
