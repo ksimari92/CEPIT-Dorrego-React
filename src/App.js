@@ -4,11 +4,19 @@ import Eventos2 from './componentes/Eventos/Eventos2';
 import Rectangulo from './componentes/Rectangulo';
 import MostrarDiv from './componentes/MostrarDiv';
 import ConversorGrados from './componentes/ConversorGrados';
+import { createContext,useContext } from 'react';
+import UserContext from './componentes/Context/UserContext';
+import CambiarImagen1 from './componentes/MostrarImagen';
+import Count from './componentes/useEffect/Count';
+import CountPair from './componentes/useEffect/CountPair';
 
 
 function App() {
-
-  let nombres = ['Matias', 'juan', 'Luis', 'Pedro'];
+  let nombres = {
+    users : ['Matias', 'juan', 'Luis', 'Pedro'],
+    edades: [2,3,4,9]
+  }
+  
 
 
   return (
@@ -16,13 +24,22 @@ function App() {
       {/* <Eventos2/> */}
       {/* <ListaDeContenidos /> */}
       {/* <Rectangulo/> */}
-      <Rectangulo />
+      {/* <Rectangulo />
       <ConversorGrados />
       <MostrarDiv />
-      <Galeria nombres={nombres} />
+      <Galeria nombres={nombres} /> */}
+      
+      {/* <CambiarImagen1/> */}
+      {/* <CountPair/> */}
 
+      <UserContext.Provider value={nombres}>
+        <Galeria />
+      </UserContext.Provider>
+   
+
+      
     </div>
   );
 }
 
-export default App;
+export default App
